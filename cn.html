@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Coding - CRC & Hamming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Network Coding Visualizer</h1>
+            <p class="subtitle">CRC Generator & Hamming Code</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="crc">CRC Generator</button>
+            <button class="mode-btn" data-mode="hamming">Hamming Code</button>
+        </div>
+
+        <!-- CRC Generator Section -->
+        <div id="crc-section" class="section active">
+            <div class="input-group">
+                <label for="crc-data">Data Bits:</label>
+                <input type="text" id="crc-data" placeholder="Enter binary data (e.g., 110101)" value="110101">
+                <label for="crc-divisor">Divisor (Generator Polynomial):</label>
+                <input type="text" id="crc-divisor" placeholder="Enter divisor (e.g., 1011)" value="1011">
+                <button class="btn-primary" onclick="generateCRC()">Generate CRC</button>
+            </div>
+            <div id="crc-animation" class="animation-container"></div>
+            <div id="crc-output" class="output-container"></div>
+        </div>
+
+        <!-- Hamming Code Section -->
+        <div id="hamming-section" class="section">
+            <div class="input-group">
+                <label for="hamming-data">Data Bits (4 or 8 bits):</label>
+                <input type="text" id="hamming-data" placeholder="Enter binary data (e.g., 1011)" value="1011">
+                <button class="btn-primary" onclick="generateHamming()">Generate Hamming Code</button>
+            </div>
+            <div id="hamming-animation" class="animation-container"></div>
+            <div id="hamming-output" class="output-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
