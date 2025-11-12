@@ -83,4 +83,8 @@ This project allows users to **understand and simulate** how **error detection**
 
 4. No server setup required — runs fully offline.
 
+## 🧾 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+
 
